@@ -15,8 +15,6 @@ document.addEventListener('DOMContentLoaded', function() {
         e.preventDefault();
         createNews();
     });
-    
-
 });
 
 document.getElementById('news-form').addEventListener('cancel', function(e) {
@@ -48,12 +46,6 @@ async function loadNews() {
     document.querySelectorAll('.delete').forEach(button => {
         button.addEventListener('click', function() {
             deleteNews(this.getAttribute('data-id'));
-        });
-    });
-
-    document.querySelectorAll('.update').forEach(button => {
-        button.addEventListener('click', function() {
-            // Update functionality can be added here
         });
     });
 }
