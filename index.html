@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News Management</title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+
+<div class="container">
+
+    <div id="news-list" class="tab active">
+        <h1>News List</h1>
+        <div class="tabs">
+            <div class="tab-button" data-tab="create-news">Create News</div>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Title</th>
+                    <th>Category</th>
+                    <th>Likes</th>
+                    <th>Date Updated</th>
+                    <th>Date Created</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="news-tbody">
+                <!-- News items will be injected here -->
+            </tbody>
+        </table>
+    </div>
+
+    <div id="create-news" class="tab">
+        <h1>Create News</h1>
+        <div class="tabs">
+            <div class="tab-button active" data-tab="news-list">News List</div>
+        </div>
+        <form id="news-form">
+            <label for="title">Title:</label><br>
+            <input type="text" id="title" name="title" required><br><br>
+            <label for="description">Description:</label><br>
+            <textarea id="description" name="description" required></textarea><br><br>
+            <label for="category">Category:</label><br>
+            <select id="category" name="category" required>
+                <option value="Politics">Politics</option>
+                <option value="Science">Science</option>
+                <option value="Lifestyle">Lifestyle</option>
+            </select><br><br>
+            <label for="editorFirstName">Editor First Name:</label><br>
+            <input type="text" id="editorFirstName" name="editorFirstName" required><br><br>
+            <label for="editorLastName">Editor Last Name:</label><br>
+            <input type="text" id="editorLastName" name="editorLastName" required><br><br>
+            <button type="submit" class="button" style="background-color: white; color: black;">Save</button>
+            </button>
+        </form>
+    </div>
+</div>
+
+<script src="js/main.js"></script>
+
+</body>
+</html>
